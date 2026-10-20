@@ -13,8 +13,8 @@ app.get('/api/konyvek', async (req, res) => {
     return res.status(200).json(response);
   }
   catch (error) {
+    console.log(`Hiba: ${error}`);
     return res.status(500).json({ error: error });
-    console.log(error);
   }
 })
 
